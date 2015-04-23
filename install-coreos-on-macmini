@@ -1,0 +1,9 @@
+* Boot mac mini from any live USB OS
+* download https://raw.githubusercontent.com/coreos/init/master/bin/coreos-install to mac mini
+* download the cloud-config.yml at this url:
+    curl -v --user username:password https://bitbucket.org/marvinp/marvin-marguerite/raw/8ca923f702a83744c8b4650e503e9734ad140c96/coreos/cloud-config.yml?at=coreos-instructions
+  soon to be
+    curl -v --user username:password https://bitbucket.org/marvinp/marvin-marguerite/raw/master/coreos/cloud-config.yml
+* run it like so:
+  ./coreos-install -C stable -d /dev/sda -c cloud-config.yml
+* It will fail with this: BLKRRPART: Device or resource busy. When that happens, reboot and rerun the same installation command.
